@@ -1,0 +1,1 @@
+"alma", "körte", "barack", "szilva", "dinnye", "mangó", "banán", "citrom", "narancs", "mandarin", "grapefruit", "ananász", "málna", "eper", "szeder", "áfonya", "cseresznye", "meggy", "ribizli", "kivi", "datolya", "füge", "szőlő", "papaya", "sárgadinnye", "görögdinnye",
