@@ -6,7 +6,8 @@ def összeg2(a: int, b: int) -> int:
     return össz
 
 def összeg3(a: int, b: int) -> int:
-    print(f"A két szám összege: {a + b}")
+    össz = a + b
+    print(f"A két szám összege: {össz}")
 
 print(f"A két szám összege: {összeg(66, 89)}")
 print(f"A két szám összege: {összeg2(66, 89)}")

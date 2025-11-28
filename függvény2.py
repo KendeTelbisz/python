@@ -5,7 +5,6 @@ def lista_összeg() -> list:
         össz += x
 
 def egyenlet(a: int, b: int, c = int(100)):
-    return(a*b)+(b*c)/2-765+1
+    return print(f"Az egyenlet eredménye: {(a*b)+(b*c)/2-765+1}")
 
 print(f"Eredmény: {lista_összeg()}")
-print(f"Az egyenlet eredménye: {egyenlet(11, 26, 200):.2f}")

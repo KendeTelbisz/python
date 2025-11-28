@@ -10,7 +10,7 @@ for szó in szöveglista:
     print(szó)
 
 #hány szó van a forrásban pontatlanul
-print(f"Szavak száma a forrásban pontatlanul: {len(szöveglista)}") 
+print(f"Szavak száma a forrásban pontatlanul: {len(szöveglista)}")  
 
 #hány szó van pontosan
 elemszám = 0
@@ -55,4 +55,3 @@ for szó in szöveglista:
         nre_végződő_szavak.append(szó) 
 
 print(f"Nre végződő szavak listája: {nre_végződő_szavak}")                               
-
