@@ -5,7 +5,7 @@ pároslista = []
 páratlanlista = []
 
 for x in range (99):
-    lista.append(random.randint(10, 99))
+      lista.append(random.randint(10, 99))
 
 
 for x in lista:
