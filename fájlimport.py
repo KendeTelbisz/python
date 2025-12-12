@@ -1,13 +1,83 @@
-termékek = [] #lista létrehozása
+#szöveg beolvasása fájlból
+with open('forras.txt', 'r', encoding='utf-8') as fajl:
+    szoveg = fajl.read()
 
-#open - fájl megnyitása az 'r' kapcsolóval utf-8 kódolással
-#as forrásfájl az adatfolyam neve 
-#ezzel beolvassa soronként a fájlt és eltárolja
-with open('áruház.csv', 'r', encoding='utf-8') as forrasfajl:
-    for sor in forrasfajl: #ez és a következő sor 3 sor csak egyszer fut le, ezután pontosan annyiszor újra lefutni amennnyi sor van
-        adatok = sor.strip().split(',')# vessző mentén darabokra szedi a sort, strip parancs szöveges függvény = eltünteti előről és hátulról a felesleges szóközöket, split szöveges függvény = megadott karakter mentén darabolt
-        termék = {'termeknev': adatok[0], 'egysegar': int(adatok[1]), 'raktarkeszlet': int(adatok[2]), 'kategoria': adatok[3]}
-        termékek.append(termék)# kulcs-érték párok hozzáadása listához
+#trükk (felesleges karakterek eltávolítása)
 
-print(f'{termékek=}',end="\n\n")
-print(f"{termékek[:5]}")
+#trükk - 2
+#elválasztók listája
+elvalasztok = [' ', '\n', ',', '.', '!', '?', ';', ':', '-', '(', ')', '[', ']', '{', '}', '"', "'"]
+for jel in elvalasztok:
+    szoveg = szoveg.replace(jel, ' ')
+
+szavak = szoveg.split(' ')
+
+szoveg = szoveg.lower()
+
+print("szavak száma:", len(szavak))
+
+tisztitott = []
+
+for szo in szavak:
+    if szo != "":
+        tisztitott.append(szo)
+
+szavak = tisztitott
+
+for x in tisztitott:
+    print(x)
+
+# "a" betűvel kezdődő szavak listája
+a_betűs_szavak = []
+
+for szó in szavak:
+    if szó[0] == 'a':
+        a_betűs_szavak.append(szó)
+
+a_betűs_szavak.sort()
+print(a_betűs_szavak)
+
+
+török = []
+
+for szó in szavak:
+    if szó == 'török':
+        török.append(szó)
+print("török szó előfordulásai:", len(török))
+
+b_betűs_szavak = []
+
+for szó in szavak:
+    if szó[0] == 'b':
+        b_betűs_szavak.append(szó)
+
+b_betűs_szavak.sort()
+print(b_betűs_szavak)
+
+
+c_betűs_szavak = []
+
+for szó in szavak:
+    if szó[0] == 'c':
+        c_betűs_szavak.append(szó)
+
+c_betűs_szavak.sort()
+print(c_betűs_szavak)
+
+
+d_betűs_szavak = []
+
+for szó in szavak:
+    if szó[0] == 'd':
+        d_betűs_szavak.append(szó)
+
+d_betűs_szavak.sort()
+print(d_betűs_szavak)
+
+#exportálás
+with open('kimenet_egricsillagok.txt', 'w', encoding='utf-8') as célfájl:
+    print(a_betűs_szavak, b_betűs_szavak, c_betűs_szavak, d_betűs_szavak, file=célfájl)
+    
+
+
+
